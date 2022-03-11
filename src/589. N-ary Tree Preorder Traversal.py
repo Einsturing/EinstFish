@@ -1,17 +1,15 @@
+# 难度-简单
+# 简单题，这难度认真的吗。。。
 """
 # Definition for a Node.
-class Node(object):
+class Node:
     def __init__(self, val=None, children=None):
         self.val = val
         self.children = children
 """
 
-class Solution(object):
-    def preorder(self, root):
-        """
-        :type root: Node
-        :rtype: List[int]
-        """
+class Solution:
+    def preorder(self, root: 'Node') -> List[int]:
         ans = []
         def dfs(node):
             if node is None:
