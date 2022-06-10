@@ -1,7 +1,6 @@
 //难度-中等
-// mt19937，初始化列表
-class Solution
-{
+//mt19937，初始化列表
+class Solution {
 private:
     mt19937 gen{random_device{}()};
     uniform_real_distribution<double> rect;
@@ -10,13 +9,10 @@ private:
 public:
     Solution(double radius, double x_center, double y_center) : rect(-radius, radius), cx(x_center), cy(y_center), r(radius) {}
 
-    vector<double> randPoint()
-    {
-        while (1)
-        {
+    vector<double> randPoint() {
+        while (1) {
             double x = rect(gen), y = rect(gen);
-            if (x * x + y * y <= r * r)
-                return {cx + x, cy + y};
+            if (x * x + y * y <= r * r) return {cx + x, cy + y};
         }
     }
 };

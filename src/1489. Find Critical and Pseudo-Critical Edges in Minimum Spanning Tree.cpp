@@ -1,6 +1,6 @@
 //难度-困难
 //并查集+kruskal，先求最小生成树，再依次去除每条边求最小生成树，若不连通或值变大就是关键边，若值不变就是伪关键边
-class UnionSet{
+class UnionSet {
 public:
     vector<int> parent;
     int cnt;
