@@ -9,9 +9,9 @@ public:
     MyCalendarThree() {}
 
     void update(int start, int end, int l, int r, int idx) {
-        if (start > r || end < l)
+        if(start > r || end < l)
             return;
-        else if (start <= l && r <= end) {
+        else if(start <= l && r <= end) {
             tree[idx]++;
             lazy[idx]++;
         }

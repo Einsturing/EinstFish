@@ -10,9 +10,9 @@ public:
     Solution(double radius, double x_center, double y_center) : rect(-radius, radius), cx(x_center), cy(y_center), r(radius) {}
 
     vector<double> randPoint() {
-        while (1) {
+        while(1) {
             double x = rect(gen), y = rect(gen);
-            if (x * x + y * y <= r * r) return {cx + x, cy + y};
+            if(x * x + y * y <= r * r) return {cx + x, cy + y};
         }
     }
 };

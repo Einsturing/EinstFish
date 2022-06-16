@@ -9,13 +9,13 @@ public:
 	    int right = 0;
 	    int cnt = 0;
 	    int res = 0;
-        while (right < len) {
-		    if (mp[A[right]] == 0) cnt++;
+        while(right < len) {
+		    if(mp[A[right]] == 0) cnt++;
 		    mp[A[right]]++;
 		    right++;
-		    while (cnt > K) {
+		    while(cnt > K) {
 			    mp[A[left]]--;
-			    if (mp[A[left]] == 0) cnt--;
+			    if(mp[A[left]] == 0) cnt--;
 			    left++;
 		    }
 		    res += right - left;

@@ -9,8 +9,7 @@ private:
 public:
     Solution(vector<vector<int>> &rects) : rects{rects} {
         this->points.emplace_back(0);
-        for (auto &rect : rects)
-            this->points.emplace_back(points.back() + (rect[2] - rect[0] + 1) * (rect[3] - rect[1] + 1));
+        for(auto &rect : rects) this->points.emplace_back(points.back() + (rect[2] - rect[0] + 1) * (rect[3] - rect[1] + 1));
     }
     vector<int> pick() {
         uniform_int_distribution<int> dis(0, points.back() - 1);
